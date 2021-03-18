@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>HEALTH CARE LOGISTICS</title>
+</head>
+<style type="text/css">
+ body{
+    margin: 0;
+    padding: 0;
+    background: url(456.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.login-box{
+    width: 320px;
+    height: 420px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.login-box p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.login-box input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.login-box input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 54px;
+    background: #1c8adb;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.login-box input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #39dc79;
+    color: #000;
+}
+
+.login-box a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+.login-box a:hover
+{
+    color: #39dc79;
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: calibri;
+    background-size: cover;
+  }
+  nav{
+    background-color: lightblue;
+    height: 80px;
+    width: 100%;
+
+  }
+  label.logo{
+    color: black;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: black;
+    font-size: 19px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+</style>
+<script type="text/javascript">
+  function validate(){
+            var un = document.getElementById('email').value; 
+            var pw = document.getElementById('pword').value; 
+            if(un.length <= 0)
+            {
+            	 document.getElementById("utext").innerHTML="**Username must not be empty";
+                 document.getElementById("utext").style.visibility="visible";
+                 document.getElementById("utext").style.color="red";  
+            }
+            if (un.length > 0) {
+                document.getElementById("utext").innerHTML="**UserName is Valid";
+                document.getElementById("utext").style.visibility="visible";
+                document.getElementById("utext").style.color="green";
+            }
+            if (pw.length <= 0) {
+                document.getElementById("ptext").innerHTML="**Password must not be empty";
+                document.getElementById("ptext").style.visibility="visible";
+                document.getElementById("ptext").style.color="red";
+            }
+            if (pw.length > 0) {
+                document.getElementById("ptext").innerHTML="**Password is Valid";
+                document.getElementById("ptext").style.visibility="visible";
+                document.getElementById("ptext").style.color="green";
+            }
+          }
+</script>
+<body>
+  <nav>
+  <label class="logo">HEALTH CARE LOGISTICS</label>
+     <ul>
+      <li><a href="home.html">HOME</a>
+      <li><a href="login.html">LOGIN</a></li>
+      <li><a href="registration.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+     </ul>
+    </nav>
+    <div class="login-box">
+      <img src="852.jpg" class="avatar">
+      <h1>LOGIN HERE</h1>
+      <form method="post" action="./MyServlet2" onsubmit="return validate()" autocomplete="off" >
+      
+        <label id="lbltext" for="email">USERNAME</label>
+        <input type="text" name="email" id="uname" required="required" placeholder="Enter USERNAME Here">
+        
+         <label id="ptext">PASSWORD</label>
+        <input type="password" name="pword" id="pword" required="required" placeholder="Enter PASSWORD Here">
+        
+        <input type="submit" value="SIGN IN" >
+      </form>
+    </div>
+</body>
+</html>
